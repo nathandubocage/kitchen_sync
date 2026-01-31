@@ -96,6 +96,38 @@ class _CoreScreenState extends State<CoreScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: widget.navigationShell,
+      floatingActionButton: Container(
+        height: 56,
+        width: 56,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.primary.withValues(alpha: 0.3),
+              blurRadius: 6,
+              spreadRadius: -4,
+              offset: const Offset(0, 4),
+            ),
+            BoxShadow(
+              color: AppColors.primary.withValues(alpha: 0.3),
+              blurRadius: 15,
+              spreadRadius: -3,
+              offset: const Offset(0, 10),
+            ),
+          ],
+        ),
+        child: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: AppColors.primary,
+          elevation: 0,
+          shape: const CircleBorder(),
+          child: const Icon(
+            SolarBoldIcons.scanner,
+            color: AppColors.white,
+            size: 28,
+          ),
+        ),
+      ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           border: Border(
