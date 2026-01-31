@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:solar_icon_pack/solar_bold_icons.dart';
+
+import 'package:kitchen_sync/ui/core/themes/colors.dart';
 
 import 'package:kitchen_sync/ui/home/view_model/home_view_model.dart';
 
@@ -61,6 +64,39 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(height: 24),
+              Row(
+                mainAxisAlignment: .spaceBetween,
+                children: [
+                  Text(
+                    'Storage Areas',
+                    style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.mirage,
+                      fontSize: 18,
+                    ),
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    spacing: 3,
+                    children: [
+                      Text(
+                        'Manage',
+                        style: GoogleFonts.dmSans(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          color: AppColors.primary,
+                        ),
+                      ),
+                      Icon(
+                        SolarBoldIcons.settings,
+                        color: AppColors.primary,
+                        size: 14,
+                      ),
+                    ],
+                  ),
+                ],
+              ).withPadding(const EdgeInsets.symmetric(horizontal: 16)),
             ],
           ),
         ),
