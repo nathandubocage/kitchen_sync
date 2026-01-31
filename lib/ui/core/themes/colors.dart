@@ -5,5 +5,7 @@ abstract final class AppColors {
   static const slateGray = Color(0xFF64748B);
   static const catskillWhite = Color(0xFFE2E8F0);
   static const catskillWhiteTwo = Color(0xFFF8FAFC);
+  static const catskillWhiteThree = Color(0xFFF1F5F9);
+  static const mirage = Color(0xFF1E293B);
   static const white = Color(0xFFFFFFFF);
 }
