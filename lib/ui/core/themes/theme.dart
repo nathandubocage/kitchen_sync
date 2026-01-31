@@ -13,8 +13,9 @@ abstract final class AppTheme {
       seedColor: AppColors.primary,
       brightness: Brightness.light,
     ),
+    scaffoldBackgroundColor: AppColors.catskillWhiteTwo,
     navigationBarTheme: NavigationBarThemeData(
-      backgroundColor: AppColors.white,
+      backgroundColor: AppColors.catskillWhiteTwo,
       elevation: 0,
       indicatorColor: Colors.transparent,
       labelTextStyle: WidgetStateProperty.resolveWith((states) {
