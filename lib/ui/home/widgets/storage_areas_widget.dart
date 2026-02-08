@@ -51,42 +51,81 @@ class StorageAreasWidget extends StatelessWidget {
         ).withPadding(const EdgeInsets.symmetric(horizontal: 16)),
         const SizedBox(height: 16),
         CardWrapperWidget(
-          child: Column(
+          child: Stack(
             children: [
-              CardHeaderWidget(
-                color: AppColors.primary,
-                icon: SolarBoldIcons.snowflake,
-                title: 'Upper Fridge',
-                subtitle: '3°C • Optimal',
-                items: 3,
+              Positioned(
+                right: 0,
+                top: 0,
+                child: Icon(
+                  SolarBoldIcons.snowflake,
+                  size: 96,
+                  color: AppColors.primary,
+                ),
+              ),
+              Column(
+                children: [
+                  CardHeaderWidget(
+                    color: AppColors.primary,
+                    icon: SolarBoldIcons.snowflake,
+                    title: 'Upper Fridge',
+                    subtitle: '3°C • Optimal',
+                    items: 3,
+                  ),
+                ],
               ),
             ],
           ),
         ),
         const SizedBox(height: 20),
         CardWrapperWidget(
-          child: Column(
+          child: Stack(
             children: [
-              CardHeaderWidget(
-                color: getColorFromStringHex("#155DFC"),
-                icon: SolarBoldIcons.fridge,
-                title: 'Lower Freezer',
-                subtitle: '-18°C • Optimal',
-                items: 23,
+              Positioned(
+                right: 0,
+                top: 0,
+                child: Icon(
+                  SolarBoldIcons.fridge,
+                  size: 96,
+                  color: getColorFromStringHex("#155DFC"),
+                ),
+              ),
+              Column(
+                children: [
+                  CardHeaderWidget(
+                    color: getColorFromStringHex("#155DFC"),
+                    icon: SolarBoldIcons.fridge,
+                    title: 'Lower Freezer',
+                    subtitle: '-18°C • Optimal',
+                    items: 23,
+                  ),
+                ],
               ),
             ],
           ),
         ),
         const SizedBox(height: 20),
         CardWrapperWidget(
-          child: Column(
+          child: Stack(
             children: [
-              CardHeaderWidget(
-                color: getColorFromStringHex("#EA580C"),
-                icon: SolarBoldIcons.box,
-                title: 'Pantry Shelves',
-                subtitle: 'Dry Storage',
-                items: 8,
+              Positioned(
+                right: 0,
+                top: 0,
+                child: Icon(
+                  SolarBoldIcons.box,
+                  size: 96,
+                  color: getColorFromStringHex("#EA580C"),
+                ),
+              ),
+              Column(
+                children: [
+                  CardHeaderWidget(
+                    color: getColorFromStringHex("#EA580C"),
+                    icon: SolarBoldIcons.box,
+                    title: 'Pantry Shelves',
+                    subtitle: 'Dry Storage',
+                    items: 8,
+                  ),
+                ],
               ),
             ],
           ),
