@@ -8,4 +8,5 @@ abstract final class AppColors {
   static const catskillWhiteThree = Color(0xFFF1F5F9);
   static const mirage = Color(0xFF1E293B);
   static const white = Color(0xFFFFFFFF);
+  static const black = Color(0xFF000000);
 }
