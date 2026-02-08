@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:kitchen_sync/routing/shell/home_shell.dart';
@@ -5,6 +6,7 @@ import 'package:kitchen_sync/routing/shell/account_shell.dart';
 import 'package:kitchen_sync/routing/shell/inventory_shell.dart';
 import 'package:kitchen_sync/routing/shell/recipes_shell.dart';
 
+import 'package:kitchen_sync/ui/scan/screen/scan_screen.dart';
 import 'package:kitchen_sync/ui/core/screen/core_screen.dart';
 
 import 'package:go_router/go_router.dart';
@@ -34,6 +36,32 @@ GoRouter createRouter() {
           recipesShell(),
           accountShell(),
         ],
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey, // Important
+        path: Routes.scan,
+        pageBuilder: (context, state) {
+          return CustomTransitionPage(
+            key: state.pageKey,
+            child: const ScanScreen(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+                  const begin = Offset(0.0, 1.0);
+                  const end = Offset.zero;
+                  const curve = Curves.easeOutQuart;
+
+                  var tween = Tween(
+                    begin: begin,
+                    end: end,
+                  ).chain(CurveTween(curve: curve));
+
+                  return SlideTransition(
+                    position: animation.drive(tween),
+                    child: child,
+                  );
+                },
+          );
+        },
       ),
     ],
   );

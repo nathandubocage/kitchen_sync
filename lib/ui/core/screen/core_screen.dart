@@ -117,7 +117,7 @@ class _CoreScreenState extends State<CoreScreen> {
           ],
         ),
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () => context.push(Routes.scan),
           backgroundColor: AppColors.primary,
           elevation: 0,
           shape: const CircleBorder(),

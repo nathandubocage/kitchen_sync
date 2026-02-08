@@ -1,4 +1,4 @@
-package com.example.kitchen_sync
+package com.example.kitchensync
 
 import io.flutter.embedding.android.FlutterActivity
 
